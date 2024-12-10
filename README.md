@@ -2,13 +2,17 @@
 
 ## Overview
 
-The **Ollama Tool Support Demo** project demonstrates how to integrate and utilize various tools with the Ollama library and the Llama 3.2 language model. This project includes scripts that showcase fetching current weather information, retrieving weather with specific formats, finding popular tourist attractions, and booking restaurant reservations using defined tool functions. Additionally, a `Makefile` is provided to streamline the setup and execution of these scripts.
+Welcome to the **Ollama Tools Support Demo** repository! This project showcases the powerful tool-calling capabilities of Ollama integrated with popular models like **Llama 3.2**. By leveraging tool support, models can perform more complex tasks and interact seamlessly with various external systems, enhancing their utility and functionality.
 
 ## Features
 
-- **Get Current Weather**: Retrieve the current weather for a specified city.
-- **Get Weather with Format**: Obtain weather information with temperature in either Celsius or Fahrenheit.
-- **Plan a Day Trip**: Assist in planning a day trip by checking the weather, suggesting tourist attractions, recommending a restaurant, and booking a reservation.
+- **Tool Calling with Multiple Parameters**: Demonstrates how to invoke tools with multiple parameters to perform sophisticated operations.
+- **Integration with Popular Models**: Supports models such as Llama 3.2, Mistral Nemo, Firefunction v2, and Command-R+.
+- **Comprehensive Tool Examples**:
+  - **Weather Checking**: Fetch current weather information.
+  - **Web Browsing**: Retrieve and interact with web content.
+  - **Code Interpretation**: Execute and interpret code snippets.
+  - **And much more!**
 
 ## Prerequisites
 
@@ -16,11 +20,12 @@ Before you begin, ensure you have met the following requirements:
 
 - **Python**: Version 3.7 or higher installed on your machine.
 - **Ollama**: Installed and running. [Download Ollama](https://ollama.com/)
-- **Access to Llama 3.2 Model**: Ensure you have access to the Llama 3.2 model via Ollama.
-- **Make**: Installed on your system to use the provided `Makefile`.
-- **Internet Connection**: Required for API calls if integrating real data sources.
+- **Access to Supported Models**: Ensure you have access to models like Llama 3.2 via Ollama.
+- **Make**: Installed on your system to utilize the provided `Makefile`.
 
 ## Installation
+
+Follow these steps to set up the project:
 
 1. **Clone the Repository**
 
@@ -31,7 +36,7 @@ Before you begin, ensure you have met the following requirements:
 
 2. **Set Up the Project Using Make**
 
-   The project uses a `Makefile` to manage the virtual environment and dependencies. Use the provided Make commands to set up and run the project.
+   The project utilizes a `Makefile` to manage the virtual environment and dependencies. Execute the following command to install all necessary components:
 
    ```bash
    make install
@@ -45,11 +50,18 @@ Before you begin, ensure you have met the following requirements:
 
 ## Usage
 
-The project includes multiple scripts to demonstrate different functionalities. Use the `Makefile` commands to run these scripts easily.
+The repository includes multiple Python scripts that demonstrate different aspects of tool support in Ollama. Use the `Makefile` commands to run these scripts effortlessly.
+
+### Available Scripts
+
+- **`tool_calls_with_single_parameter.py`**: Fetches the current weather for a specified city using a single parameter.
+- **`tool_calls_with_multiple_parameters.py`**: Retrieves weather information with temperature in either Celsius or Fahrenheit.
+- **`tool_calls_with_multiple_tools.py`**: Comprehensive script for planning a day trip, including weather checks, attraction suggestions, restaurant recommendations, and booking reservations.
+- **`tool_complete_example.py`**: An end-to-end example demonstrating the complete workflow of tool calls and conversation management.
 
 ### Make Commands
 
-The `Makefile` simplifies the execution of various tasks within the project. Below are the essential Make commands:
+Use the following Make commands to interact with the scripts:
 
 - **Display Help Information**
 
@@ -97,6 +109,14 @@ The `Makefile` simplifies the execution of various tasks within the project. Bel
 
   **Description**: Executes the comprehensive script for planning a day trip, which includes checking the weather, suggesting tourist attractions, recommending a restaurant, and booking a reservation.
 
+- **Run Complete Example Script**
+
+  ```bash
+  make run-complete-example
+  ```
+
+  **Description**: Executes the complete example demonstrating the full workflow of tool calls and conversation management.
+
 - **Clean the Project**
 
   ```bash
@@ -108,11 +128,12 @@ The `Makefile` simplifies the execution of various tasks within the project. Bel
 ## Project Structure
 
 ```
-ollama-tool-support-demo/
+ollama-tools-support-demo/
 ├── src/
 │   ├── tool_calls_with_single_parameter.py
 │   ├── tool_calls_with_multiple_parameters.py
-│   └── tool_calls_with_multiple_tools.py
+│   ├── tool_calls_with_multiple_tools.py
+│   └── tool_complete_example.py
 ├── Makefile
 ├── README.md
 ├── requirements.txt
@@ -123,6 +144,7 @@ ollama-tool-support-demo/
   - `tool_calls_with_single_parameter.py`: Fetches the current weather for a specified city.
   - `tool_calls_with_multiple_parameters.py`: Retrieves weather information with temperature in a chosen format.
   - `tool_calls_with_multiple_tools.py`: Comprehensive script for planning a day trip, including weather checks, attraction suggestions, restaurant recommendations, and booking reservations.
+  - `tool_complete_example.py`: Complete example showcasing the entire workflow of tool calls and conversation management.
 - **Makefile**: Automates the setup and execution of scripts.
 - **requirements.txt**: Lists all Python dependencies required for the project.
 - **venv/**: Virtual environment directory (created after running `make install`).

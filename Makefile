@@ -18,6 +18,8 @@ SRC_DIR := src
 SCRIPT_SINGLE_PARAMETER := $(SRC_DIR)/tool_calls_with_single_parameter.py
 SCRIPT_MULTIPLE_PARAMETERS := $(SRC_DIR)/tool_calls_with_multiple_parameters.py
 SCRIPT_MULTIPLE_TOOLS := $(SRC_DIR)/tool_calls_with_multiple_tools.py
+SCRIPT_COMPLETE_EXAMPLE := $(SRC_DIR)/tool_complete_example.py
+
 
 # Requirements file
 REQUIREMENTS := requirements.txt
@@ -61,6 +63,12 @@ run-multiple-parameters: install
 run-multiple-tools: install
 	@echo "Running tool_calls_with_multiple_tools.py..."
 	$(PYTHON) $(SCRIPT_MULTIPLE_TOOLS)
+
+# Run the multiple tools script
+.PHONY: run-complete-example
+run-complete-example: install
+	@echo "Running tool_complete_example.py..."
+	$(PYTHON) $(SCRIPT_COMPLETE_EXAMPLE)
 
 # Clean the project: Remove virtual environment and Python cache files
 .PHONY: clean
