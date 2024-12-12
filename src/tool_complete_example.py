@@ -9,7 +9,6 @@ import time as time_module
 def get_current_weather(city, format):
     """
     Mock function to get current weather for a city.
-    Replace with real API integration in production.
     """
     weather_data = {
         'Sydney': {
@@ -44,7 +43,6 @@ def get_current_weather(city, format):
 def find_popular_attractions(city, category):
     """
     Mock function to find popular tourist attractions in a city.
-    Replace with real API integration in production.
     """
     attractions = {
         'Sydney': {
@@ -70,7 +68,6 @@ def find_popular_attractions(city, category):
 def book_restaurant(city, restaurant_name, time_str, number_of_people):
     """
     Mock function to book a restaurant.
-    Replace with real API integration in production.
     """
     confirmation = {
         'restaurant_name': restaurant_name,
